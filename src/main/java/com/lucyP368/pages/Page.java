@@ -16,7 +16,7 @@ public abstract class Page {
     public Page(WebDriver driver, List<By> expectedBys) {
         this.driver = driver;
 
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(1));
         for (By expectedBy : expectedBys) {
             try {
                 wait.until(ExpectedConditions.visibilityOfElementLocated(expectedBy));
